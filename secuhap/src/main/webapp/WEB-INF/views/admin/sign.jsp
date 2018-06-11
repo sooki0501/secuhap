@@ -6,6 +6,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원가입</title>
 </head>
+
+<style>
+	table {
+		border : 1px solid black;
+		border-collapse: collapse;
+	}
+	
+	th, td {
+		border: 1px solid black;
+	}
+
+
+</style>
+
 <body>
 
 	<h1>회원가입 페이지</h1>
@@ -20,10 +34,11 @@
 				<td>비밀번호</td>
 				<td><input type="password" name="loginPw"></td>
 			</tr>
-			<tr>
-				<td><input type="submit" value="가입하기" /><input type="reset" value="다시작성" /><input type="button" value="취소하기" onclick="history.back();" /></td>
-			</tr>
+			
 		</table>
+		<input type="submit" value="가입하기">
+		<input type="reset" value="다시작성">
+		<input type="button" value="취소하기" onclick="history.back();">
 	</form>
 
 
