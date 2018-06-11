@@ -6,7 +6,7 @@
 	
 </style>
 
-	<h1>게시판</h1>
+	<h1>게시판이다다다</h1>
 	<table>
 	<c:forEach items="${vlist}" var="vdto">
 		<tr>
