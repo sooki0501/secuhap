@@ -1,4 +1,4 @@
-package com.web.kong.board;
+package com.web.kong.boardi;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 import com.web.kong.DTO.BoardiDTO;
 
 @Service
-public class BoardService implements IBoardService{
+public class BoardiService implements IBoardiService{
 
 	@Autowired
-	private BoardDAO dao;
+	private BoardiDAO dao;
 	
 	@Override
 	public List<BoardiDTO> list() {

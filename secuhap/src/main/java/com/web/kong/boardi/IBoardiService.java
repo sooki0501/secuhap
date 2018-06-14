@@ -1,10 +1,10 @@
-package com.web.kong.board;
+package com.web.kong.boardi;
 
 import java.util.List;
 
 import com.web.kong.DTO.BoardiDTO;
 
-public interface IBoardService {
+public interface IBoardiService {
 
 	List<BoardiDTO> list();
 

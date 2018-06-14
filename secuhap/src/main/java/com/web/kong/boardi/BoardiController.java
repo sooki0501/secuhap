@@ -1,4 +1,4 @@
-package com.web.kong.board;
+package com.web.kong.boardi;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.web.kong.DTO.BoardiDTO;
 
 @Controller
-public class BoardController {
+public class BoardiController {
 
 	@Autowired
-	private IBoardService service;
+	private IBoardiService service;
 	
 	@RequestMapping(method={RequestMethod.GET}, value="/board")
 	public String Board(HttpServletRequest req) {
@@ -71,7 +71,7 @@ public class BoardController {
 		
 		List<BoardiDTO> vlist = service.vlist(boardnum);
 		
-		req.setAttribute("vlist", vlist);
+		req.setAttribute("vlist", vlist); 
 		
 		return "board/boardEdit";
 	}

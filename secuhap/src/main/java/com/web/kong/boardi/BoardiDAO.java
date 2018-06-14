@@ -1,4 +1,4 @@
-package com.web.kong.board;
+package com.web.kong.boardi;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.web.kong.DTO.BoardiDTO;
 
 @Repository
-public class BoardDAO {
+public class BoardiDAO {
 
 	@Autowired
 	private SqlSessionTemplate sql;
