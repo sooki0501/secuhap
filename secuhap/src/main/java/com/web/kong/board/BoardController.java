@@ -66,8 +66,25 @@ public class BoardController {
 		return "board/boardDel";
 	}
 	
+	@RequestMapping(method={RequestMethod.GET}, value="/boardEdit")
+	public String BoardEdit(HttpServletRequest req, String boardnum) {
+		
+		List<BoardiDTO> vlist = service.vlist(boardnum);
+		
+		req.setAttribute("vlist", vlist);
+		
+		return "board/boardEdit";
+	}
 	
-	
+	@RequestMapping(method={RequestMethod.POST}, value="/boardEditOk")
+	public String BoardEditOk(HttpServletRequest req, BoardiDTO dto) {
+		
+		int result = service.edit(dto);
+		
+		req.setAttribute("result", result);
+		
+		return "board/boardEditOk";
+	}
 	
 	
 	

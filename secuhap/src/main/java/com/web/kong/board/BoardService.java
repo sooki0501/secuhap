@@ -37,5 +37,11 @@ public class BoardService implements IBoardService{
 		return dao.del(boardnum);
 	}
 	
+	@Override
+	public int edit(BoardiDTO dto) {
+		// TODO Auto-generated method stub
+		return dao.edit(dto);
+	}
+	
 	
 }

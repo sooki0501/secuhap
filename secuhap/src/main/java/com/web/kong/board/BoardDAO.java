@@ -34,5 +34,10 @@ public class BoardDAO {
 		return sql.delete("board.del", boardnum);
 	}
 
+	public int edit(BoardiDTO dto) {
+		// TODO Auto-generated method stub
+		return sql.update("board.edit", dto);
+	}
+
 	
 }

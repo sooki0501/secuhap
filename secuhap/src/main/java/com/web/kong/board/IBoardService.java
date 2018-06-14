@@ -14,6 +14,8 @@ public interface IBoardService {
 
 	int del(String boardnum);
 
+	int edit(BoardiDTO dto);
+
 
 	
 }

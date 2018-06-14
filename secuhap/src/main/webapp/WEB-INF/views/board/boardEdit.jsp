@@ -6,7 +6,8 @@
 	
 </style>
 
-	<h1>게시판이다다다</h1>
+	<h1>수정이다다다</h1>
+	<form action="${pageContext.request.contextPath}/boardEditOk" method="post">
 	<table>
 	<c:forEach items="${vlist}" var="vdto">
 		<tr>
@@ -15,21 +16,21 @@
 		</tr>
 		<tr>
 			<th>제목</th>
-			<td>${vdto.subject}</td>
+			<td><input type="text" name="subject" value="${vdto.subject}" /></td>
 		</tr>
 		<tr>
 			<th >쓴자</th>
-			<td>${vdto.writer}</td>
+			<td><input type="text" name="writer" value="${vdto.writer}" /></td>
 		</tr>
 		<tr>
 			<th>내용</th>
-			<td>${ivdto.contentq}</td>
+			<td><input type="text" name="contentq" value="${ivdto.contentq}" /></td>
 		</tr>
 
+		<input type="hidden" name="boardnum" value="${vdto.boardnum}" />
 		<input class="btn btn-normal" type="button" value="뒤로가기" onclick="history.back();">
 		<input class="btn btn-normal" type="button" value="글삭제" onclick="location.href='${pageContext.request.contextPath}/boardDel?boardnum=${vdto.boardnum}';">
-		<input class="btn btn-normal" type="button" id="iedit" name="iedit" value="수정하기" onclick="location.href='${pageContext.request.contextPath}/boardEdit?boardnum=${vdto.boardnum}';" >
+		<input type="submit" value="수정하기">
 	</c:forEach>		
 	</table>
-
-
+	</form>

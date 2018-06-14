@@ -20,6 +20,10 @@
 		delete from boardi where boardnum = #{boardnum}
 	</delete>
 	
+	<update id="edit" parameterType="com.web.kong.DTO.BoardiDTO">
+		update boardi set subject = #{subject}, writer = #{writer}, contentq = #{contentq} where boardnum = #{boardnum}
+	</update>
+	
 
 </mapper>
 
