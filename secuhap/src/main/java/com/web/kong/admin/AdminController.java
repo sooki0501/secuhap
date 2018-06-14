@@ -25,7 +25,7 @@ public class AdminController {
 		
 		req.setAttribute("userList", userList);
 		
-		return "admin/admin";
+		return "admin/adminTest";
 	}
 	
 	@RequestMapping(method={RequestMethod.GET}, value="/checkOk")

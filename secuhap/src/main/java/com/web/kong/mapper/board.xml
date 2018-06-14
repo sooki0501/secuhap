@@ -3,6 +3,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="board">
+<<<<<<< HEAD
 
 	<select id="list" resultType="com.web.kong.DTO.BoardDTO">
 		select * from board
@@ -40,3 +41,45 @@
 
 
 
+=======
+	
+	<select id="list" resultType="com.web.kong.DTO.BoardiDTO">
+		select * from boardi order by boardnum asc
+	</select>
+	
+	<select id="vlist" resultType="com.web.kong.DTO.BoardiDTO">
+		select * from boardi where boardnum = #{boardnum}
+	</select>
+	
+	<insert id="add" parameterType="com.web.kong.DTO.BoardiDTO">
+		insert into boardi values(#{boardnum}, #{subject}, #{writer}, #{contentq})
+	</insert>
+	
+	<delete id="del" parameterType="String">
+		delete from boardi where boardnum = #{boardnum}
+	</delete>
+	
+	<update id="edit" parameterType="com.web.kong.DTO.BoardiDTO">
+		update boardi set subject = #{subject}, writer = #{writer}, contentq = #{contentq} where boardnum = #{boardnum}
+	</update>
+	
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+>>>>>>> branch 'master' of https://github.com/sooki0501/secuhap.git
