@@ -39,5 +39,7 @@ public class BoardiDAO {
 		return sql.update("board.edit", dto);
 	}
 
+
+
 	
 }

@@ -3,6 +3,7 @@ package com.web.kong.admin;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -51,6 +52,26 @@ public class AdminController {
 		
 		return "admin/admin";
 	}
+	
+	@RequestMapping(method={RequestMethod.GET}, value="/login")
+	public String adminLogin(HttpServletRequest req) {
+		
+		return "board/login";
+		
+	}
+	
+	
+	
+	 @RequestMapping(method= {RequestMethod.POST},value="/loginOk" )
+	 public String loginok(HttpServletRequest req,UserDTO udto,HttpSession session) {
+		  
+		  UserDTO dto = service.logIn(udto);
+		  
+		  session.setAttribute("UserDTO", dto);
+		  
+		  return "board/loginOk";
+		  
+	  }
 	
 	
 	

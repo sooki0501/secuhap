@@ -29,6 +29,11 @@ public class AdminDAO {
 		return sql.update("admin.checkNo");
 	}
 
+	public UserDTO logIn(UserDTO udto) {
+		// TODO Auto-generated method stub
+		return sql.selectOne("admin.login", udto);
+	}
+
 	
 	
 }

@@ -12,6 +12,8 @@ public interface IAdminService {
 
 	int checkNo();
 
+	UserDTO logIn(UserDTO udto);
+
 	
 	
 

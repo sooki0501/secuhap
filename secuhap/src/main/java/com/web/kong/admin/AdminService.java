@@ -31,4 +31,10 @@ public class AdminService implements IAdminService{
 		return dao.checkNo();
 	}
 	
+	@Override
+	public UserDTO logIn(UserDTO udto) {
+		// TODO Auto-generated method stub
+		return dao.logIn(udto);
+	}
+	
 }

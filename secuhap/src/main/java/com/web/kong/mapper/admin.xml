@@ -15,6 +15,10 @@
 	<update id="checkNo" parameterType="com.web.kong.DTO.UserDTO">
 		update login set checkId = '0' where checkId = '1'
 	</update>
+	
+	<select id="login" resultType="com.web.kong.DTO.UserDTO" parameterType="com.web.kong.DTO.UserDTO">
+		select * from login where loginId = #{loginId} and loginPw = #{loginPw} and checkId = 1
+	</select>
 
 </mapper>
 

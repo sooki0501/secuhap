@@ -17,5 +17,9 @@ public interface IBoardiService {
 	int edit(BoardiDTO dto);
 
 
+
+	
+
+
 	
 }
