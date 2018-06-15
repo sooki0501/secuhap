@@ -5,8 +5,15 @@ public class UserDTO {
 	private String loginId;
 	private String loginPw;
 	private String checkId;
+	private String checkId2;
 	
 	
+	public String getCheckId2() {
+		return checkId2;
+	}
+	public void setCheckId2(String checkId2) {
+		this.checkId2 = checkId2;
+	}
 	public String getLoginId() {
 		return loginId;
 	}

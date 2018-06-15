@@ -1,22 +1,23 @@
 package com.web.kong.DTO;
 
 public class BoardDTO {
-
-	private String num;
+	private String num; 
 	private String boardid;
-	private String writer;
-	private String subject;
-	private String email;
-	private String content;
-	private String passwd;
-	private String reg_date;
-	private String readcount;
-	private String ip;
-	private String ref;
-	private String re_step;
-	private String re_level;
-	private String filename;
-	private String getNum() {
+    private String writer;
+    private String subject;
+    private String email;
+    private String content;
+    private String passwd;
+    private String reg_date; 
+    private String readcount;
+    private String ip;
+    private String ref;
+    private String re_step;	
+    private String re_level;
+    private String filename;
+    private String filesize;
+	
+	public String getNum() {
 		return num;
 	}
 	public void setNum(String num) {
@@ -106,6 +107,5 @@ public class BoardDTO {
 	public void setFilesize(String filesize) {
 		this.filesize = filesize;
 	}
-	public String filesize;
-	
-}
+
+ }
