@@ -13,11 +13,12 @@ a {
 </style>
 <p class="w3-left" style="padding-left: 30px;"></p>
 <div class="w3-container">
-	<c:forEach items="${list}" var="dto">
+
 		<span class="w3-center  w3-large">
-			<h3>(전체 글:${dto.})</h3>
+			<%-- <h3>(전체 글:${count})</h3> --%>
+			<h3> 게 시 판  </h3>
 		</span>
-	</c:forEach>
+	
 	<p class="w3-right w3-padding-right-large">
 		<a href="writeForm">글쓰기</a>
 	</p>
@@ -58,7 +59,7 @@ a {
 		</c:forEach>
 
 	</table>
-	<div class="w3-center">
+	<%-- <div class="w3-center">
 
 		<c:if test="${count > 0 }">
 
@@ -77,7 +78,7 @@ a {
 
 		</c:if>
 
-	</div>
+	</div> --%>
 
 
 

@@ -20,11 +20,14 @@ public class BoardController {
 	
 	
 	@RequestMapping(method={RequestMethod.GET}, value="/list")
-	public String list(HttpServletRequest req) {
+	public String list(HttpServletRequest req, BoardDTO dto) {
 
 		List<BoardDTO> list = service.list();
 		
 		req.setAttribute("list", list);
+		
+	/*	List<BoardDTO> readcount = service.readcount(dto);
+		req.setAttribute("readcount", readcount);*/
 	
 		return "board/list";
 	}

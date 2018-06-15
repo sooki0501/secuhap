@@ -14,16 +14,15 @@ public class BoardDAO {
 	private SqlSessionTemplate sql;
 
 	public List<BoardDTO> list() {
-		// TODO Auto-generated method stub
+		
 		return sql.selectList("board.list");
 	}
 
 	public List<BoardDTO> list2(BoardDTO dto) {
-		// TODO Auto-generated method stub
+		
 		return sql.selectList("board.boardList", dto);
 	}
-	
-	
+
 	public int add(BoardDTO dto) {
 		return sql.insert("board.add", dto);
 	}
@@ -35,5 +34,11 @@ public class BoardDAO {
 	public int del(BoardDTO dto) {
 		return sql.delete("board.del", dto);
 	}
+	
+	/*public List<BoardDTO> readcount(BoardDTO dto) {
+		
+		return sql.selectList("board.readcount", dto);
+	}*/
+
 
 }

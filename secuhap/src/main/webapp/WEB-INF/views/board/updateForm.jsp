@@ -47,11 +47,6 @@
 									cols="40">${dto.content}</textarea></td>
 						</tr>
 						<tr>
-							<td width="70" align="center">비밀번호</td>
-							<td width="330"><input type="password" size="8"
-								maxlength="12" name="passwd"></td>
-						</tr>
-						<tr>
 							<td colspan=2 align="center"><input type="submit"
 								value="글쓰기"> <input type="reset" value="다시작성">
 								<input type="button" value="목록보기"

@@ -15,5 +15,7 @@ public interface IBoardService {
 	int edit(BoardDTO dto);
 	
 	int del(BoardDTO dto);
+	
+	/*List<BoardDTO> readcount(BoardDTO dto);*/
 
 }

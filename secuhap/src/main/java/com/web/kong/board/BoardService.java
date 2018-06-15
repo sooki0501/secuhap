@@ -45,5 +45,11 @@ public class BoardService implements IBoardService{
 		return dao.del(dto);
 	}
 	
+	/*@Override
+	public List<BoardDTO> readcount(BoardDTO dto) {
+		
+		return dao.readcount(dto);
+	}
+	*/
 	
 }
