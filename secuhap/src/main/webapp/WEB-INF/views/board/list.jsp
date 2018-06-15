@@ -22,6 +22,9 @@ a {
 	<p class="w3-right w3-padding-right-large">
 		<a href="writeForm">글쓰기</a>
 	</p>
+	<p class="w3-left w3-padding-left-large">
+		<a href="logout">로그아웃</a>
+	</p>
 	<c:if test="${dto.readcount == 0}">
 
 		<table class="table-bordered" width="700">

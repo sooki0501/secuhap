@@ -12,9 +12,9 @@
 	<!-- DB연결 -->
 	<bean id="source" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:testdb"></property>
-		<property name="username" value="system"></property>
-		<property name="password" value="epdlwl7507"></property>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+		<property name="username" value="scott"></property>
+		<property name="password" value="tiger"></property>
 	</bean> 
 	
 
@@ -33,7 +33,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="log4j"></property>
 		<property name="mapperLocations" value="classpath*:com/web/kong/mapper/*.xml"></property>
-		<property name="configLocation" value="/classpath*:com/web/kong/mapper/*.xml"></property>
+		<property name="configLocation" value="/WEB-INF/mybatis.xml"></property>
 	</bean>
 
 

@@ -5,7 +5,7 @@
 <mapper namespace="sign">
 	
 	<insert id="signOk" parameterType="com.web.kong.DTO.UserDTO">
-		insert into login (LOGINID, LOGINPW, checkId) values (#{loginId}, #{loginPw}, '0')
+		insert into login (LOGINID, LOGINPW, checkId, checkId2) values (#{loginId}, #{loginPw}, '0', '0')
 	</insert>
 
 </mapper>

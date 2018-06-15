@@ -43,17 +43,17 @@ public class LoginController {
 		UserDTO dto = service.login(ldto);
 		dto.getCheckId();
 		session.setAttribute("loginDTO", dto);
-		
-		System.out.println("============= dto.getCheckId() : "+ dto.getCheckId());
+		//System.out.println("============= dto.getCheckId() : "+ dto.getCheckId());
 		System.out.println("============= loginDTO  :" + dto );
-		
 		return "login/loginOk";
 	}
 	
+	
 	@RequestMapping("/success")
 	public String success() {
-		return "login/success";
+		return "board/list";
 	}
+	
 	
 	@RequestMapping("/logout")
 	public String logout (HttpSession session) {

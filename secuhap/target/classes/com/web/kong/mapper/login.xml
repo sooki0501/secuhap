@@ -4,7 +4,7 @@
 
 <mapper namespace="login">
 
-	<select id="in" parameterType="com.web.yoon.DTO.UserDTO" resultType="com.web.yoon.DTO.UserDTO">
+	<select id="in" parameterType="com.web.kong.DTO.UserDTO" resultType="com.web.kong.DTO.UserDTO">
 		select * from login where loginId=#{loginId} and loginPw=#{loginPw}
 	</select>
 	
