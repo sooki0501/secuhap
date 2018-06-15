@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="login">
+
+	<select id="in" parameterType="com.web.yoon.DTO.UserDTO" resultType="com.web.yoon.DTO.UserDTO">
+		select * from login where loginId=#{loginId} and loginPw=#{loginPw}
+	</select>
+	
+	<!-- checkId 값 받기 위해서 -->
+	<!-- <select id="checkId" parameterType="com.web.yoon.DTO.UserDTO" resultType="com.web.yoon.DTO.UserDTO">
+		select checkId from login where loginId=#{loginId}
+	</select> -->
+	
+	<!-- 전체 목록 넘기는 테스트  -->
+	<!-- <select id="user" resultType="com.web.yoon.DTO.UserDTO">
+	 	select * from login
+	</select> -->
+
+</mapper>
