@@ -5,7 +5,7 @@
 <mapper namespace="admin">
 	
 	<select id="user" resultType="com.web.kong.DTO.UserDTO">
-		select * from login
+		select * from login where loginId NOT IN ('admin')
 	</select>
 	
 	<update id="checkOk" parameterType="com.web.kong.DTO.UserDTO">

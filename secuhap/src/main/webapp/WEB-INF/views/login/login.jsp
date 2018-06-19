@@ -166,8 +166,12 @@ body{
 				<input type="text" placeholder="username" name="loginId"><br>
 				<input type="password" placeholder="password" name="loginPw"><br>
 				<input type="submit" value="Login">
+				<h4><a href="sign">회원가입</a></h4>
 		</div>
 </form>
+
+
+
   <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
 
 </body>

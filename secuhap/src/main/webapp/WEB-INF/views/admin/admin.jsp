@@ -11,12 +11,16 @@
 	th, td {
 		border: 1px solid black;
 	}
-
-
 </style>
+
+<c:if test="${loginDTO.loginId != 'admin'}">
+	<script>
+		alert("관리자가 아닙니다.");
+		history.go(-1);
+	</script>
+</c:if>
 	
 	<table>
-	
 		<tr>
 			<th>아이디</th>
 			<th>비밀번호</th>
@@ -35,6 +39,9 @@
 	
 		</c:forEach>
 	</table>
+	
+	
 	<input type="button" value="전체승인" onclick="location.href='/web/checkOk';">
 	<input type="button" value="전체거절" onclick="location.href='/web/checkNo';">
+	<input type="button" value="로그아웃" onclick="location.href='/web/logout';">
 	

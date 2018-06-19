@@ -39,6 +39,7 @@
 		<input type="submit" value="가입하기">
 		<input type="reset" value="다시작성">
 		<input type="button" value="취소하기" onclick="history.back();">
+		<input type="button" value="Login" onclick="location.href='${pageContext.request.contextPath}/main'">
 	</form>
 
 

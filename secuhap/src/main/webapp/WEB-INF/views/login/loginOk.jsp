@@ -3,18 +3,28 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
-<c:if test="${loginDTO.checkId == '0'}">
-	<script>
-		alert("승인 대기중인 회원입니다");
-		history.go(-1);
-	</script>
-</c:if>
+
 
 <c:if test="${loginDTO !=null}">
-	<script>
-		location.href="${pageContext.request.contextPath}/success";
-	</script>
-</c:if>
+
+	<c:if test="${loginDTO.loginId == 'admin'}">
+		<script>
+			location.href="${pageContext.request.contextPath}/admin";
+		</script>
+	</c:if>
+
+	<c:if test="${loginDTO.checkId == '0'}">
+		<script>
+			alert("승인 대기중인 회원입니다");
+			history.go(-1);
+		</script>
+	</c:if>
+
+		<script>
+			location.href="${pageContext.request.contextPath}/list";
+		</script>
+	</c:if>
+	
 
 <c:if test="${loginDTO == null}">
 	<script>
@@ -26,11 +36,22 @@
 
 
 
- 
- 
-<%--   <c:choose>
+
+
+
+
+
+
+<%--  
+<c:choose>
+
+	<c:when test="${loginDTO.loginId == 'admin'}">
+		<script>
+			location.href="${pageContext.request.contextPath}/admin";
+		</script>
+	</c:when>
   
-   <c:when test="${checkId == '0'}">
+   <c:when test="${loginDTO.checkId == '0'}">
  	<script>
 		alert("승인 대기중인 회원입니다");
 		history.go(-1);
@@ -39,7 +60,7 @@
  
  <c:when test="${loginDTO !=null}">
  	<script>
-		location.href="${pageContext.request.contextPath}/success";
+		location.href="${pageContext.request.contextPath}/list";
 	</script>
  </c:when>
  
@@ -50,5 +71,5 @@
 	</script>
  </c:when> 
 
- </c:choose>--%>
+ </c:choose> --%>
  

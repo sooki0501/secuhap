@@ -4,7 +4,7 @@
 
 <mapper namespace="board">
 	<select id="list" resultType="com.web.kong.DTO.BoardDTO">
-		select * from board
+		select * from board order by num ASC
 	</select>
 
 	<select id="boardList" resultType="com.web.kong.DTO.BoardDTO">
